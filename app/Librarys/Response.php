@@ -99,11 +99,16 @@ class Response
      */
     public static function error($errno, $data = [], $msg = '', $status = 200)
     {
-        if (!$msg) {
-            [$errno, $msg] = self::parseMsg($errno);
+        //if (!$msg) {
+        //    [$errno, $msg] = self::parseMsg($errno);
+        //}
+
+		$code = Config::get("error.{$errno}" . ".code", '110000');
+        if (empty($msg)) {
+            $msg = Config::get("error.{$errno}" . ".msg", 'common.COMMON_UNKNOWN_ERROR');
         }
 
-        $code = Config::get("error.{$errno}" . ".code", '110000');
+        $msg = trans($msg);
         if (empty($data)) {
             $data = new stdClass();
         }
