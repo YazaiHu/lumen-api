@@ -51,9 +51,9 @@ class Composer
      * const RELEASE_DATE = '@release_date@';
      * const SOURCE_VERSION = '1.8-dev+source';
      */
-    const VERSION = '2.0.9';
+    const VERSION = '2.1.5';
     const BRANCH_ALIAS_VERSION = '';
-    const RELEASE_DATE = '2021-01-27 16:09:27';
+    const RELEASE_DATE = '2021-07-23 10:35:47';
     const SOURCE_VERSION = '';
 
     /**
@@ -65,7 +65,7 @@ class Composer
      *
      * @var string
      */
-    const RUNTIME_API_VERSION = '2.0.0';
+    const RUNTIME_API_VERSION = '2.1.0';
 
     public static function getVersion()
     {

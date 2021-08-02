@@ -9,6 +9,7 @@ use Illuminate\Contracts\Broadcasting\Factory as BroadcastFactory;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Contracts\Container\Container as ContainerContract;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
+use Illuminate\Contracts\Queue\ShouldBeEncrypted;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -70,7 +71,7 @@ class Dispatcher implements DispatcherContract
      * Register an event listener with the dispatcher.
      *
      * @param  \Closure|string|array  $events
-     * @param  \Closure|string|null  $listener
+     * @param  \Closure|string|array|null  $listener
      * @return void
      */
     public function listen($events, $listener = null)
@@ -285,7 +286,7 @@ class Dispatcher implements DispatcherContract
     }
 
     /**
-     * Check if event should be broadcasted by condition.
+     * Check if the event should be broadcasted by the condition.
      *
      * @param  mixed  $event
      * @return bool
@@ -548,9 +549,9 @@ class Dispatcher implements DispatcherContract
     {
         [$listener, $job] = $this->createListenerAndJob($class, $method, $arguments);
 
-        $connection = $this->resolveQueue()->connection(
-            $listener->connection ?? null
-        );
+        $connection = $this->resolveQueue()->connection(method_exists($listener, 'viaConnection')
+                    ? $listener->viaConnection()
+                    : $listener->connection ?? null);
 
         $queue = method_exists($listener, 'viaQueue')
                     ? $listener->viaQueue()
@@ -588,18 +589,18 @@ class Dispatcher implements DispatcherContract
     protected function propagateListenerOptions($listener, $job)
     {
         return tap($job, function ($job) use ($listener) {
+            $job->afterCommit = property_exists($listener, 'afterCommit') ? $listener->afterCommit : null;
+            $job->backoff = method_exists($listener, 'backoff') ? $listener->backoff() : ($listener->backoff ?? null);
+            $job->maxExceptions = $listener->maxExceptions ?? null;
+            $job->retryUntil = method_exists($listener, 'retryUntil') ? $listener->retryUntil() : null;
+            $job->shouldBeEncrypted = $listener instanceof ShouldBeEncrypted;
+            $job->timeout = $listener->timeout ?? null;
             $job->tries = $listener->tries ?? null;
 
-            $job->backoff = method_exists($listener, 'backoff')
-                                ? $listener->backoff() : ($listener->backoff ?? null);
-
-            $job->timeout = $listener->timeout ?? null;
-
-            $job->afterCommit = property_exists($listener, 'afterCommit')
-                                ? $listener->afterCommit : null;
-
-            $job->retryUntil = method_exists($listener, 'retryUntil')
-                                ? $listener->retryUntil() : null;
+            $job->through(array_merge(
+                method_exists($listener, 'middleware') ? $listener->middleware() : [],
+                $listener->middleware ?? []
+            ));
         });
     }
 

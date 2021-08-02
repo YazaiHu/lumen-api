@@ -2,11 +2,56 @@
 
 All notable changes to this project will be documented in this file.
 
-[Next release](https://github.com/barryvdh/laravel-ide-helper/compare/v2.8.1...master)
+[Next release](https://github.com/barryvdh/laravel-ide-helper/compare/v2.10.0...master)
 --------------
-### Changed
-- Dropped support for Laravel 6 and Laravel 7, as well as support for PHP 7.2 [\# / mfn]()
 
+2021-04-09, 2.10.0
+------------------
+### Added
+- Allowing Methods to be set or unset in ModelHooks [\#1198 / jenga201](https://github.com/barryvdh/laravel-ide-helper/pull/1198)\
+  Note: the visibility of `\Barryvdh\LaravelIdeHelper\Console\ModelsCommand::setMethod` has been changed to **public**!
+
+### Fixed
+- Fixing issue where incorrect autoloader unregistered [\#1210 / tezhm](https://github.com/barryvdh/laravel-ide-helper/pull/1210)
+
+2021-04-02, 2.9.3
+-----------------
+### Fixed
+- Support both customized namespace factories as well as default resolvable ones [\#1201 / wimski](https://github.com/barryvdh/laravel-ide-helper/pull/1201)
+
+2021-04-01, 2.9.2
+-----------------
+### Added
+- Model hooks for adding custom information from external sources to model classes through the ModelsCommand [\#945 / wimski](https://github.com/barryvdh/laravel-ide-helper/pull/945)
+
+### Fixed
+- Fix ide-helper:models exception if model doesn't have factory [\#1196 / ahmed-aliraqi](https://github.com/barryvdh/laravel-ide-helper/pull/1196)
+- Running tests triggering post_migrate hooks [\#1193 / netpok](https://github.com/barryvdh/laravel-ide-helper/pull/1193)
+- Array_merge error when config is cached prior to package install [\#1184 / netpok](https://github.com/barryvdh/laravel-ide-helper/pull/1184)
+
+2021-03-15, 2.9.1
+-----------------
+### Added
+- Generate PHPDoc for Laravel 8.x factories [\#1074 / ahmed-aliraqi](https://github.com/barryvdh/laravel-ide-helper/pull/1074)
+- Add a comment to a property like table columns [\#1168 / biiiiiigmonster](https://github.com/barryvdh/laravel-ide-helper/pull/1168)
+- Added `post_migrate` hook to run commands after a migration [\#1163 / netpok](https://github.com/barryvdh/laravel-ide-helper/pull/1163)
+
+### Fixed
+- Error when generating helper for invokable classes [\#1124 / standaniels](https://github.com/barryvdh/laravel-ide-helper/pull/1124)
+- Fix broken ReflectionUnionTypes [\#1132 / def-studio](https://github.com/barryvdh/laravel-ide-helper/pull/1132)
+- Relative class names are not converted to fully-qualified class names [\#1005 / SavKS](https://github.com/barryvdh/laravel-ide-helper/pull/1005)
+
+2020-12-30, 2.9.0
+-----------------
+### Changed
+- Dropped support for Laravel 6 and Laravel 7, as well as support for PHP 7.2 and added support for doctrine/dbal:^3 [\#1114 / mfn](https://github.com/barryvdh/laravel-ide-helper/pull/1114)
+
+### Fixed
+- `Macro::initPhpDoc()` will save original docblock if present [\#1116 / LastDragon-ru](https://github.com/barryvdh/laravel-ide-helper/pull/1116)
+- `Alias` will grab macros from `\Illuminate\Database\Eloquent\Builder` too [\#1118 / LastDragon-ru](https://github.com/barryvdh/laravel-ide-helper/pull/1118)
+
+2020-12-08, 2.8.2
+-----------------
 ### Added
 - Fix phpdoc generate for custom cast with parameter [\#986 / artelkr](https://github.com/barryvdh/laravel-ide-helper/pull/986)
 - Created a possibility to add custom relation type [\#987 / efinder2](https://github.com/barryvdh/laravel-ide-helper/pull/987)

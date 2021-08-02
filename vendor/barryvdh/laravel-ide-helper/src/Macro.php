@@ -17,15 +17,17 @@ class Macro extends Method
      * @param \ReflectionClass    $class
      * @param null                $methodName
      * @param array               $interfaces
+     * @param array               $classAliases
      */
     public function __construct(
         $method,
         $alias,
         $class,
         $methodName = null,
-        $interfaces = []
+        $interfaces = [],
+        $classAliases = []
     ) {
-        parent::__construct($method, $alias, $class, $methodName, $interfaces);
+        parent::__construct($method, $alias, $class, $methodName, $interfaces, $classAliases);
     }
 
     /**
@@ -65,7 +67,11 @@ class Macro extends Method
 
     protected function addLocationToPhpDoc()
     {
-        $enclosingClass = $this->method->getClosureScopeClass();
+        if ($this->method->name === '__invoke') {
+            $enclosingClass = $this->method->getDeclaringClass();
+        } else {
+            $enclosingClass = $this->method->getClosureScopeClass();
+        }
 
         /** @var \ReflectionMethod $enclosingMethod */
         $enclosingMethod = Collection::make($enclosingClass->getMethods())

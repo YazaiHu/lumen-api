@@ -13,6 +13,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateFreeLockCorrectOrder createFreeLockCorrectOrder(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
  * @method CreatePublishGroupTask createPublishGroupTask(array $options = [])
+ * @method CreateSQLReviewOrder createSQLReviewOrder(array $options = [])
  * @method CreateStructSyncOrder createStructSyncOrder(array $options = [])
  * @method CreateUploadFileJob createUploadFileJob(array $options = [])
  * @method CreateUploadOSSFileJob createUploadOSSFileJob(array $options = [])
@@ -43,6 +44,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetOwnerApplyOrderDetail getOwnerApplyOrderDetail(array $options = [])
  * @method GetPermApplyOrderDetail getPermApplyOrderDetail(array $options = [])
  * @method GetPhysicalDatabase getPhysicalDatabase(array $options = [])
+ * @method GetSQLReviewCheckResultStatus getSQLReviewCheckResultStatus(array $options = [])
+ * @method GetSQLReviewOptimizeDetail getSQLReviewOptimizeDetail(array $options = [])
  * @method GetStructSyncExecSqlDetail getStructSyncExecSqlDetail(array $options = [])
  * @method GetStructSyncJobAnalyzeResult getStructSyncJobAnalyzeResult(array $options = [])
  * @method GetStructSyncJobDetail getStructSyncJobDetail(array $options = [])
@@ -56,6 +59,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListColumns listColumns(array $options = [])
  * @method ListDatabases listDatabases(array $options = [])
  * @method ListDatabaseUserPermssions listDatabaseUserPermssions(array $options = [])
+ * @method ListDataCorrectPreCheckDB listDataCorrectPreCheckDB(array $options = [])
+ * @method ListDataCorrectPreCheckSQL listDataCorrectPreCheckSQL(array $options = [])
  * @method ListDBTaskSQLJob listDBTaskSQLJob(array $options = [])
  * @method ListDBTaskSQLJobDetail listDBTaskSQLJobDetail(array $options = [])
  * @method ListDDLPublishRecords listDDLPublishRecords(array $options = [])
@@ -66,6 +71,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListOrders listOrders(array $options = [])
  * @method ListSensitiveColumns listSensitiveColumns(array $options = [])
  * @method ListSensitiveColumnsDetail listSensitiveColumnsDetail(array $options = [])
+ * @method ListSQLReviewOriginSQL listSQLReviewOriginSQL(array $options = [])
  * @method ListTables listTables(array $options = [])
  * @method ListUserPermissions listUserPermissions(array $options = [])
  * @method ListUsers listUsers(array $options = [])
@@ -239,6 +245,20 @@ class CreateOrder extends Rpc
  * @method $this withPublishStrategy($value)
  */
 class CreatePublishGroupTask extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getParam()
+ * @method $this withParam($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ * @method string getRelatedUserList()
+ * @method $this withRelatedUserList($value)
+ */
+class CreateSQLReviewOrder extends Rpc
 {
 }
 
@@ -621,6 +641,28 @@ class GetPhysicalDatabase extends Rpc
 /**
  * @method string getOrderId()
  * @method $this withOrderId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderActionName()
+ * @method $this withOrderActionName($value)
+ */
+class GetSQLReviewCheckResultStatus extends Rpc
+{
+}
+
+/**
+ * @method string getSQLReviewQueryKey()
+ * @method $this withSQLReviewQueryKey($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetSQLReviewOptimizeDetail extends Rpc
+{
+}
+
+/**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getTid()
@@ -789,6 +831,36 @@ class ListDatabaseUserPermssions extends Rpc
 }
 
 /**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListDataCorrectPreCheckDB extends Rpc
+{
+}
+
+/**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListDataCorrectPreCheckSQL extends Rpc
+{
+}
+
+/**
  * @method string getDBTaskGroupId()
  * @method $this withDBTaskGroupId($value)
  * @method string getPageNumber()
@@ -949,6 +1021,20 @@ class ListSensitiveColumns extends Rpc
  * @method $this withTableName($value)
  */
 class ListSensitiveColumnsDetail extends Rpc
+{
+}
+
+/**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getOrderActionDetail()
+ * @method $this withOrderActionDetail($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderActionName()
+ * @method $this withOrderActionName($value)
+ */
+class ListSQLReviewOriginSQL extends Rpc
 {
 }
 

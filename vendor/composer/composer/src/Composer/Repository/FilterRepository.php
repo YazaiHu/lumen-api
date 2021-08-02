@@ -33,17 +33,17 @@ class FilterRepository implements RepositoryInterface
             if (!is_array($options['only'])) {
                 throw new \InvalidArgumentException('"only" key for repository '.$repo->getRepoName().' should be an array');
             }
-            $this->only = '{^'.implode('|', array_map(function ($val) {
+            $this->only = '{^(?:'.implode('|', array_map(function ($val) {
                 return BasePackage::packageNameToRegexp($val, '%s');
-            }, $options['only'])) .'$}iD';
+            }, $options['only'])) .')$}iD';
         }
         if (isset($options['exclude'])) {
             if (!is_array($options['exclude'])) {
                 throw new \InvalidArgumentException('"exclude" key for repository '.$repo->getRepoName().' should be an array');
             }
-            $this->exclude = '{^'.implode('|', array_map(function ($val) {
+            $this->exclude = '{^(?:'.implode('|', array_map(function ($val) {
                 return BasePackage::packageNameToRegexp($val, '%s');
-            }, $options['exclude'])) .'$}iD';
+            }, $options['exclude'])) .')$}iD';
         }
         if ($this->exclude && $this->only) {
             throw new \InvalidArgumentException('Only one of "only" and "exclude" can be specified for repository '.$repo->getRepoName());
@@ -165,9 +165,9 @@ class FilterRepository implements RepositoryInterface
     public function getProviders($packageName)
     {
         $result = array();
-        foreach ($this->repo->getProviders($packageName) as $provider) {
+        foreach ($this->repo->getProviders($packageName) as $name => $provider) {
             if ($this->isAllowed($provider['name'])) {
-                $result[] = $provider;
+                $result[$name] = $provider;
             }
         }
 
@@ -185,6 +185,7 @@ class FilterRepository implements RepositoryInterface
     /**
      * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         if ($this->repo->count() > 0) {

@@ -39,7 +39,7 @@ class ErrorHandler
     {
         // error code is not included in error_reporting
         if (!(error_reporting() & $level)) {
-            return;
+            return true;
         }
 
         if (filter_var(ini_get('xdebug.scream'), FILTER_VALIDATE_BOOLEAN)) {
@@ -52,6 +52,11 @@ class ErrorHandler
         }
 
         if (self::$io) {
+            // ignore symfony/* deprecation warnings about return types
+            if (preg_match('{^Return type of Symfony\\\\.*ReturnTypeWillChange}is', $message)) {
+                return true;
+            }
+
             self::$io->writeError('<warning>Deprecation Notice: '.$message.' in '.$file.':'.$line.'</warning>');
             if (self::$io->isVerbose()) {
                 self::$io->writeError('<warning>Stack trace:</warning>');

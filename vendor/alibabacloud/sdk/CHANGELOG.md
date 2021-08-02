@@ -1,5 +1,487 @@
 # CHANGELOG
 
+## 1.8.1060 - 2021-8-2
+- Update TaggingImage.
+
+
+## 1.8.1059 - 2021-8-2
+- Support upgrade.
+
+
+## 1.8.1058 - 2021-7-30
+- Update Dyvmsapi SDK.
+
+
+## 1.8.1057 - 2021-7-29
+- Support Alb Open API.
+
+
+## 1.8.1056 - 2021-7-29
+- ListAppInstanceResponse add status field.
+
+
+## 1.8.1055 - 2021-7-28
+- Generated 2018-03-13 for `retailcloud`.
+
+
+## 1.8.1054 - 2021-7-27
+- Add DescribeAuditLogConfig API.
+
+
+## 1.8.1053 - 2021-7-22
+- Add private-link support.
+- Add download dicts.
+- Add whiteIpGroup support.
+- Add recovery infos support.
+
+
+## 1.8.1052 - 2021-7-21
+- Create Lindorm Open api.
+
+
+## 1.8.1051 - 2021-7-21
+- Create Lindorm Open api.
+
+
+## 1.8.1050 - 2021-7-21
+- Support HealthCheckMethod for HTTP and HTTPS listener.
+
+
+## 1.8.1049 - 2021-7-19
+- CreateNetworkInterface supports to allocate Ipv6.
+
+
+## 1.8.1048 - 2021-7-19
+- Update ScreenChestCT.
+
+
+## 1.8.1047 - 2021-7-15
+- Support Alb Open API.
+
+
+## 1.8.1046 - 2021-7-15
+- Generated 2020-01-01 for `ddoscoo`.
+
+
+## 1.8.1045 - 2021-7-9
+- Add `CheckCertificate` Api.
+- Supported AndroidRenderStyle, AndroidBigTitle, AndroidBigBody, AndroidXiaomiBigPictureUrl for Push and MassPush.
+
+
+## 1.8.1044 - 2021-7-9
+- Fix ListPIpelineTemplates.
+
+
+## 1.8.1043 - 2021-7-8
+- Support app group.
+
+
+## 1.8.1042 - 2021-7-8
+- Support APP auth.
+
+
+## 1.8.1041 - 2021-7-8
+- Generated 2016-11-01 for `live`.
+
+
+## 1.8.1040 - 2021-7-7
+- Add ModifyResourceGroup API.
+
+
+## 1.8.1039 - 2021-7-7
+- Support FilterKey for RestoreInstance.
+- DescribeInstanceAttribute add return argument BackupLogStartTime.
+- Add RemoveSubInstance for Global Distributed Cache.
+
+
+## 1.8.1038 - 2021-7-7
+- Supported AAA for BBB.
+
+
+## 1.8.1037 - 2021-7-6
+- Support ListDataCorrectPreCheckDB,ListDataCorrectPreCheckSQL Order API.
+
+
+## 1.8.1036 - 2021-7-2
+- Release RecognizeQuotaInvoice RecognizeTicketInvoice RecognizePdf.
+
+
+## 1.8.1035 - 2021-7-2
+- Release AnalyzeChestVessel.
+
+
+## 1.8.1034 - 2021-6-28
+- Edit ListRetcodeApps.
+- Edit SearchRetcodeAppByPage.
+
+
+## 1.8.1033 - 2021-6-28
+- Support GetSQLReviewOptimizeDetail,ListSQLReviewOriginSQL Order API.
+
+
+## 1.8.1032 - 2021-6-25
+- Update DescribeSplitItemBill to support daily report.
+
+
+## 1.8.1031 - 2021-6-24
+- Create Lindorm Open api.
+
+
+## 1.8.1030 - 2021-6-24
+- Update QueryBillOverview, QuerySettleBill, QueryAccountBill, DescribeInstanceBill and support trusteeship bill query.
+
+
+## 1.8.1029 - 2021-6-21
+- Generated 2019-11-20 for `Ga`.
+
+
+## 1.8.1028 - 2021-6-21
+- Generated 2019-11-20 for `Ga`.
+
+
+## 1.8.1027 - 2021-6-21
+- Generated 2016-04-28 for `Vpc`.
+
+
+## 1.8.1026 - 2021-6-18
+- Supported 20210618 version for sdk.
+
+
+## 1.8.1025 - 2021-6-17
+- Generated 2019-11-20 for `Ga`.
+
+
+## 1.8.1024 - 2021-6-16
+- Update imageaudit.
+
+
+## 1.8.1023 - 2021-6-16
+- Encrypt Dialog Content.
+
+
+## 1.8.1022 - 2021-6-15
+- Add ListDevopsProjects.
+
+
+## 1.8.1021 - 2021-6-11
+- Add CreateSshKey OpenAPI.
+
+
+## 1.8.1020 - 2021-6-10
+- Support SQLReview Order API.
+
+
+## 1.8.1019 - 2021-6-10
+- Generated 2016-11-01 for `live`.
+
+
+## 1.8.1018 - 2021-6-10
+- Generated 2016-04-28 for `Vpc`.
+
+
+## 1.8.1017 - 2021-6-9
+- Update TMP API, including QueryDevice, CreateThingModel, UpdateThingModel, ImportThingModelTsl, BatchPickThingModel, ListDeviceDistributeJob.
+- Add TMP API, including QueryDeviceInfo.
+- Update OTA API, including CreateOTAVerifyJob, CreateOTAStaticUpgradeJob, CreateOTADynamicUpgradeJob, CancelOTATaskByJob, QueryOTAJob.
+- Add OTA API, including ListOTAUnfinishedTaskByDevice,ConfirmOTATask.
+
+
+## 1.8.1016 - 2021-6-9
+- Create Lindorm Open api.
+
+
+## 1.8.1015 - 2021-6-9
+- Create Lindorm Open api.
+
+
+## 1.8.1014 - 2021-6-9
+- Edit GetTrace.
+
+
+## 1.8.1013 - 2021-6-8
+- Support Aliyun Workorder OpenAPI.
+
+
+## 1.8.1012 - 2021-6-8
+- Support input parameter LaunchConfigurationHostNames and MinTargetCapacity for CreateAutoProvisioningGroup.
+
+
+## 1.8.1011 - 2021-6-8
+- Increase detection frequency for availability monitoring.
+- Add application group to query in batch according to group ID.
+
+
+## 1.8.1010 - 2021-6-5
+- New API Version of Work Order System.
+
+
+## 1.8.1009 - 2021-6-4
+- Add Emon-Service support.
+- Remove Deprecated Interfaces.
+
+
+## 1.8.1008 - 2021-6-4
+- Supported multi attach feature for disk.
+
+
+## 1.8.1007 - 2021-6-4
+- Delete live API.
+
+
+## 1.8.1006 - 2021-6-3
+- Add name.
+
+
+## 1.8.1005 - 2021-6-3
+- Support name.
+
+
+## 1.8.1004 - 2021-6-2
+- Support key deletion protection.
+
+
+## 1.8.1003 - 2021-5-31
+- Support upgrade.
+
+
+## 1.8.1002 - 2021-5-28
+- Add TriggerRemoteSync api.
+
+
+## 1.8.1001 - 2021-5-28
+- Create Lindorm Open api.
+
+
+## 1.8.1000 - 2021-5-28
+- Create Lindorm Open api.
+
+
+## 1.8.999 - 2021-5-27
+- Generated 2019-09-10 for `waf-openapi`.
+
+
+## 1.8.998 - 2021-5-24
+- Support a2a openapi.
+
+
+## 1.8.997 - 2021-5-22
+- Aaaaa.
+
+
+## 1.8.996 - 2021-5-21
+- Supported DescribeLoadBalancers with DeleteProtection and so on.
+
+
+## 1.8.995 - 2021-5-21
+- Support StrictResourceProvision in ApplyNodes.
+
+
+## 1.8.994 - 2021-5-20
+- Upgrade mongodb sdk.
+
+
+## 1.8.993 - 2021-5-19
+- Generated 2020-05-18 for `dataworks-public`.
+
+
+## 1.8.992 - 2021-5-19
+- Update API.
+
+
+## 1.8.991 - 2021-5-19
+- Publish multi language sdk.
+
+
+## 1.8.990 - 2021-5-18
+- Add IoT Studio SetStudioProjectCooperation API.
+- Add IoT Studio QueryStudioProjectList API.
+- Add IoT Studio QueryStudioAppList API.
+- Add IoT Studio QueryStudioAppPageListOpen API.
+- Add IoT Studio QueryStudioAppDomainListOpen API.
+- Add IoT Studio DeleteStudioAppDomainOpen API.
+- Add IoT Studio CreateStudioAppDomainOpen API.
+- Add IoT Studio GetStudioAppTokenOpen API.
+- Add IoT Studio SetupStudioAppAuthModeOpen API.
+- Add IoT Studio RefreshStudioAppTokenOpen API.
+- Add IoT Studio PublishStudioApp API.
+
+
+## 1.8.989 - 2021-5-18
+- Support MinCount for AddNodes.
+- Support HostNamePreffix and HostNameSuffix for ListNodes.
+
+
+## 1.8.988 - 2021-5-17
+- Add API ListQuotaReviewTasks.
+
+
+## 1.8.987 - 2021-5-17
+- Support DescribeInstallCaptcha API.
+
+
+## 1.8.986 - 2021-5-17
+- Export new API for predictive dialer.
+
+
+## 1.8.985 - 2021-5-17
+- Add DescribeDcdnRefreshTaskById.
+
+
+## 1.8.984 - 2021-5-14
+- Release ExtractFingerPrint.
+
+
+## 1.8.983 - 2021-5-14
+- EnableAdditionalBandwidth add AutoRenew,AutoRenewPeriod parameter.
+
+
+## 1.8.982 - 2021-5-14
+- Update ScreenChestCT.
+
+
+## 1.8.981 - 2021-5-14
+- Support Private RDS management through OpenAPI.
+- ManagePrivateRds to do RDS information query and some management.
+- DescribeDrdsRdsInstances to find RDS under a certain DRDS instance.
+- UpdatePrivateRdsClass to Upgrade or Downgrade your Private RDS class.
+
+
+## 1.8.980 - 2021-5-14
+- Support Private RDS management through OpenAPI.
+- ManagePrivateRds to do RDS information query and some management.
+- DescribeDrdsRdsInstances to find RDS under a certain DRDS instance.
+- UpdatePrivateRdsClass to Upgrade or Downgrade your Private RDS class.
+
+
+## 1.8.979 - 2021-5-13
+- Generated 2020-01-01 for `ddoscoo`.
+
+
+## 1.8.978 - 2021-5-13
+- Add Indexing-Service support.
+- Remove jsonItem form.
+
+
+## 1.8.977 - 2021-5-12
+- Add GetRepositoryCommit and ListRepositoryCommitDiff API.
+
+
+## 1.8.976 - 2021-5-12
+- Create Lindorm Open api.
+
+
+## 1.8.975 - 2021-5-12
+- Generated 2020-05-18 for `dataworks-public`.
+
+
+## 1.8.974 - 2021-5-11
+- CreateInstance API add Port, Tags, DryRun.
+
+
+## 1.8.973 - 2021-5-10
+- Update RecognizeDriverLicense RecognizeLicensePlate.
+
+
+## 1.8.972 - 2021-5-10
+- Add API GenerateMergedTable.
+- Add API ListDateSourceTables.
+- Add API ListDateSourceTableFields.
+- Add API ListRamRoles.
+
+
+## 1.8.971 - 2021-5-10
+- Delete API.
+
+
+## 1.8.970 - 2021-5-10
+- Delete live API.
+
+
+## 1.8.969 - 2021-5-10
+- Delete Api.
+
+
+## 1.8.968 - 2021-5-10
+- Delete API.
+
+
+## 1.8.967 - 2021-5-8
+- Support SLB DescribeLoadBalancerListeners.
+
+
+## 1.8.966 - 2021-5-8
+- Generated 2020-05-18 for `dataworks-public`.
+
+
+## 1.8.965 - 2021-5-8
+- Generated 2018-01-20 for `Iot`.
+
+
+## 1.8.964 - 2021-5-7
+- Support interface DescribeDBInstanceEncryptionKey for DB Instance Cloud Disk Encryption.
+
+
+## 1.8.963 - 2021-5-6
+- Generated 2016-11-01 for `live`.
+
+
+## 1.8.962 - 2021-5-6
+- Update Open API.
+
+
+## 1.8.961 - 2021-4-30
+- Add OpenArmsServiceSecondVersion.
+
+
+## 1.8.960 - 2021-4-29
+- ModifyNodeSpec API add SwitchTime.
+
+
+## 1.8.959 - 2021-4-29
+- Add DescribeInstances API.
+
+
+## 1.8.958 - 2021-4-29
+- Update RecognizeFace.
+
+
+## 1.8.957 - 2021-4-29
+- Mod ListDashboards add parameters,support dashboardName query.
+
+
+## 1.8.956 - 2021-4-29
+- Support sag reseller.
+
+
+## 1.8.955 - 2021-4-29
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+
+## 1.8.954 - 2021-4-28
+- Export new API.
+
+
+## 1.8.953 - 2021-4-27
+- GetProjectMember support pageSize.
+
+
+## 1.8.952 - 2021-4-27
+- Generated 2016-11-01 for `live`.
+
+
+## 1.8.951 - 2021-4-27
+- Add CustomMessage to CreateMergeFaceGroupsJob.
+
+
+## 1.8.950 - 2021-4-22
+- Support NetworkInterface TrafficMode.
+
+
+## 1.8.949 - 2021-4-22
+- AcceptInquiredSystemEvent adds Choice parameter.
+- DescribeInstanceHistoryEvents supports multiple resource types.
+
+
 ## 1.8.948 - 2021-4-22
 - Support CEN latest Apis.
 

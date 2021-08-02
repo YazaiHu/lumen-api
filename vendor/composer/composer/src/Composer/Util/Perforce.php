@@ -220,6 +220,10 @@ class Perforce
         $this->executeCommand($command);
     }
 
+    /**
+     * @param  string  $name
+     * @return ?string
+     */
     protected function getP4variable($name)
     {
         if ($this->windowsFlag) {

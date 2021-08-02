@@ -13,6 +13,7 @@
 namespace Composer\Console;
 
 use Composer\IO\NullIO;
+use Composer\Util\Filesystem;
 use Composer\Util\Platform;
 use Composer\Util\Silencer;
 use Symfony\Component\Console\Application as BaseApplication;
@@ -33,6 +34,8 @@ use Composer\Util\ErrorHandler;
 use Composer\Util\HttpDownloader;
 use Composer\EventDispatcher\ScriptExecutionException;
 use Composer\Exception\NoSslException;
+use Composer\XdebugHandler\XdebugHandler;
+use Symfony\Component\Process\Exception\ProcessTimedOutException;
 
 /**
  * The console application that handles the commands
@@ -44,7 +47,7 @@ use Composer\Exception\NoSslException;
 class Application extends BaseApplication
 {
     /**
-     * @var Composer
+     * @var ?Composer
      */
     protected $composer;
 
@@ -136,12 +139,13 @@ class Application extends BaseApplication
         $io = $this->io = new ConsoleIO($input, $output, new HelperSet(array(
             new QuestionHelper(),
         )));
+
+        // Register error handler again to pass it the IO instance
         ErrorHandler::register($io);
 
         if ($input->hasParameterOption('--no-cache')) {
             $io->writeError('Disabling cache usage', true, IOInterface::DEBUG);
-            $_SERVER['COMPOSER_CACHE_DIR'] = Platform::isWindows() ? 'nul' : '/dev/null';
-            putenv('COMPOSER_CACHE_DIR='.$_SERVER['COMPOSER_CACHE_DIR']);
+            Platform::putEnv('COMPOSER_CACHE_DIR', Platform::isWindows() ? 'nul' : '/dev/null');
         }
 
         // switch working dir
@@ -236,7 +240,7 @@ class Application extends BaseApplication
                 $io->writeError('<warning>Composer only officially supports PHP 5.3.2 and above, you will most likely encounter problems with your PHP '.PHP_VERSION.', upgrading is strongly recommended.</warning>');
             }
 
-            if (extension_loaded('xdebug') && !getenv('COMPOSER_DISABLE_XDEBUG_WARN')) {
+            if (XdebugHandler::isXdebugActive() && !getenv('COMPOSER_DISABLE_XDEBUG_WARN')) {
                 $io->writeError('<warning>Composer is operating slower than normal because you have Xdebug enabled. See https://getcomposer.org/xdebug</warning>');
             }
 
@@ -280,7 +284,7 @@ class Application extends BaseApplication
 
             // add non-standard scripts as own commands
             $file = Factory::getComposerFile();
-            if (is_file($file) && is_readable($file) && is_array($composer = json_decode(file_get_contents($file), true))) {
+            if (is_file($file) && Filesystem::isReadable($file) && is_array($composer = json_decode(file_get_contents($file), true))) {
                 if (isset($composer['scripts']) && is_array($composer['scripts'])) {
                     foreach ($composer['scripts'] as $script => $dummy) {
                         if (!defined('Composer\Script\ScriptEvents::'.str_replace('-', '_', strtoupper($script)))) {
@@ -385,6 +389,11 @@ class Application extends BaseApplication
             $io->writeError('<error>Check https://getcomposer.org/doc/articles/troubleshooting.md#proc-open-fork-failed-errors for details</error>', true, IOInterface::QUIET);
         }
 
+        if ($exception instanceof ProcessTimedOutException) {
+            $io->writeError('<error>The following exception is caused by a process timeout</error>', true, IOInterface::QUIET);
+            $io->writeError('<error>Check https://getcomposer.org/doc/06-config.md#process-timeout for details</error>', true, IOInterface::QUIET);
+        }
+
         if ($hints = HttpDownloader::getExceptionHints($exception)) {
             foreach ($hints as $hint) {
                 $io->writeError($hint, true, IOInterface::QUIET);
@@ -410,12 +419,15 @@ class Application extends BaseApplication
             } catch (\InvalidArgumentException $e) {
                 if ($required) {
                     $this->io->writeError($e->getMessage());
-                    exit(1);
+                    if ($this->areExceptionsCaught()){
+                        exit(1);
+                    }
+                    throw $e;
                 }
             } catch (JsonValidationException $e) {
-                $errors = ' - ' . implode(PHP_EOL . ' - ', $e->getErrors());
-                $message = $e->getMessage() . ':' . PHP_EOL . $errors;
-                throw new JsonValidationException($message);
+                if ($required) {
+                    throw $e;
+                }
             }
         }
 
@@ -479,6 +491,7 @@ class Application extends BaseApplication
             new Command\OutdatedCommand(),
             new Command\CheckPlatformReqsCommand(),
             new Command\FundCommand(),
+            new Command\ReinstallCommand(),
         ));
 
         if (strpos(__FILE__, 'phar:') === 0) {
