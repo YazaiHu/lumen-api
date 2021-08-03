@@ -36,6 +36,7 @@ $app->configure('mail');
 $app->configure('sms');
 $app->configure('common');
 $app->configure('oss');
+$app->configure('easysms');
 
 /*
 |--------------------------------------------------------------------------

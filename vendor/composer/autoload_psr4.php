@@ -60,6 +60,7 @@ return array(
     'Payment\\' => array($vendorDir . '/riverslei/payment/src'),
     'PackageVersions\\' => array($vendorDir . '/composer/package-versions-deprecated/src/PackageVersions'),
     'Overtrue\\LaravelLang\\' => array($vendorDir . '/overtrue/laravel-lang/src'),
+    'Overtrue\\EasySms\\' => array($vendorDir . '/overtrue/easy-sms/src'),
     'Opis\\Closure\\' => array($vendorDir . '/opis/closure/src'),
     'OSS\\' => array($vendorDir . '/aliyuncs/oss-sdk-php/src/OSS'),
     'Namshi\\JOSE\\' => array($vendorDir . '/namshi/jose/src/Namshi/JOSE'),

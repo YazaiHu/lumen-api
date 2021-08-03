@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '9204e360ecc2c6def8b51a17ddfcdecbd99f1181',
+    'reference' => 'f2906605e1a7e5fe0b3b2a1075d95104be80e281',
     'name' => 'laravel/lumen',
   ),
   'versions' => 
@@ -1845,7 +1845,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '9204e360ecc2c6def8b51a17ddfcdecbd99f1181',
+      'reference' => 'f2906605e1a7e5fe0b3b2a1075d95104be80e281',
     ),
     'laravel/lumen-framework' => 
     array (
@@ -2044,6 +2044,15 @@
       array (
       ),
       'reference' => '06e2ebd25f2869e54a306dda991f7db58066f7f6',
+    ),
+    'overtrue/easy-sms' => 
+    array (
+      'pretty_version' => '1.3.2',
+      'version' => '1.3.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'daa0b4308ec0e3c112888c288d14d473be6aabee',
     ),
     'overtrue/laravel-lang' => 
     array (
@@ -2268,8 +2277,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0|2.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0|2.0',
       ),
     ),
     'psr/simple-cache' => 

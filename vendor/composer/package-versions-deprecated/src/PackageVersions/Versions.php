@@ -101,6 +101,7 @@ final class Versions
   'nikic/fast-route' => 'v1.3.0@181d480e08d9476e61381e04a71b34dc0432e812',
   'nikic/php-parser' => 'v4.12.0@6608f01670c3cc5079e18c1dab1104e002579143',
   'opis/closure' => '3.6.2@06e2ebd25f2869e54a306dda991f7db58066f7f6',
+  'overtrue/easy-sms' => '1.3.2@daa0b4308ec0e3c112888c288d14d473be6aabee',
   'overtrue/laravel-lang' => '5.0.0@30133b4b97a43368949ca48985cd04968d50ba40',
   'phpoffice/phpspreadsheet' => '1.18.0@418cd304e8e6b417ea79c3b29126a25dc4b1170c',
   'phpoption/phpoption' => '1.7.5@994ecccd8f3283ecf5ac33254543eb0ac946d525',
@@ -206,7 +207,7 @@ final class Versions
   'squizlabs/php_codesniffer' => '3.6.0@ffced0d2c8fa8e6cdc4d695a743271fab6c38625',
   'symfony/filesystem' => 'v5.3.4@343f4fe324383ca46792cae728a3b6e2f708fb32',
   'theseer/tokenizer' => '1.2.1@34a41e998c2183e22995f158c581e7b5e755ab9e',
-  'laravel/lumen' => 'dev-master@9204e360ecc2c6def8b51a17ddfcdecbd99f1181',
+  'laravel/lumen' => 'dev-master@f2906605e1a7e5fe0b3b2a1075d95104be80e281',
 );
 
     private function __construct()
