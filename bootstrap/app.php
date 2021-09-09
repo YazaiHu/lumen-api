@@ -37,6 +37,7 @@ $app->configure('sms');
 $app->configure('common');
 $app->configure('oss');
 $app->configure('easysms');
+$app->configure('throttle');
 
 /*
 |--------------------------------------------------------------------------
