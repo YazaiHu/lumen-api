@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'f2906605e1a7e5fe0b3b2a1075d95104be80e281',
+    'reference' => '044ad0a8b59a38e51afcffe2ebd48a67dcfed80c',
     'name' => 'laravel/lumen',
   ),
   'versions' => 
@@ -1521,6 +1521,15 @@ private static $installed = array (
       ),
       'reference' => '7e279d2cd5d7fbb156ce46daada972355cea27bb',
     ),
+    'graham-campbell/throttle' => 
+    array (
+      'pretty_version' => 'v8.1.0',
+      'version' => '8.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c468cba27345fb41db279db16e967addd7db897b',
+    ),
     'guzzlehttp/guzzle' => 
     array (
       'pretty_version' => '6.5.5',
@@ -1868,7 +1877,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'f2906605e1a7e5fe0b3b2a1075d95104be80e281',
+      'reference' => '044ad0a8b59a38e51afcffe2ebd48a67dcfed80c',
     ),
     'laravel/lumen-framework' => 
     array (

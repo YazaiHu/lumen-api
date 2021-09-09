@@ -12,6 +12,7 @@
         "flipbox/lumen-generator": "^8.2",
         "godruoyi/php-snowflake": "^1.0",
         "google/protobuf": "^3.14",
+        "graham-campbell/throttle": "^8.1",
         "hashids/hashids": "^4.1",
         "illuminate/filesystem": "^8.26",
         "illuminate/mail": "^8.23",

@@ -50,6 +50,7 @@ final class Versions
   'godruoyi/php-snowflake' => '1.1.1@d8cbe72ed375b45033b7042e3d03340ce4fa479f',
   'google/protobuf' => 'v3.17.3@ae9282cf11dd2933b7e71a611f9590f07d53d3f3',
   'graham-campbell/result-type' => 'v1.0.1@7e279d2cd5d7fbb156ce46daada972355cea27bb',
+  'graham-campbell/throttle' => 'v8.1.0@c468cba27345fb41db279db16e967addd7db897b',
   'guzzlehttp/guzzle' => '6.5.5@9d4290de1cfd701f38099ef7e183b64b4b7b0c5e',
   'guzzlehttp/promises' => '1.4.1@8e7d04f1f6450fef59366c399cfad4b9383aa30d',
   'guzzlehttp/psr7' => '1.8.2@dc960a912984efb74d0a90222870c72c87f10c91',
@@ -207,7 +208,7 @@ final class Versions
   'squizlabs/php_codesniffer' => '3.6.0@ffced0d2c8fa8e6cdc4d695a743271fab6c38625',
   'symfony/filesystem' => 'v5.3.4@343f4fe324383ca46792cae728a3b6e2f708fb32',
   'theseer/tokenizer' => '1.2.1@34a41e998c2183e22995f158c581e7b5e755ab9e',
-  'laravel/lumen' => 'dev-master@f2906605e1a7e5fe0b3b2a1075d95104be80e281',
+  'laravel/lumen' => 'dev-master@044ad0a8b59a38e51afcffe2ebd48a67dcfed80c',
 );
 
     private function __construct()

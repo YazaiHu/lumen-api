@@ -255,6 +255,7 @@ class ComposerStaticInit70aaccd23c002b184e9ad54f77bbd0f0
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'GrahamCampbell\\Throttle\\' => 24,
             'GrahamCampbell\\ResultType\\' => 26,
             'Google\\Protobuf\\' => 16,
             'Godruoyi\\Snowflake\\' => 19,
@@ -722,6 +723,10 @@ class ComposerStaticInit70aaccd23c002b184e9ad54f77bbd0f0
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'GrahamCampbell\\Throttle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/graham-campbell/throttle/src',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
@@ -3211,6 +3216,20 @@ class ComposerStaticInit70aaccd23c002b184e9ad54f77bbd0f0
         'GrahamCampbell\\ResultType\\Error' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Error.php',
         'GrahamCampbell\\ResultType\\Result' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Result.php',
         'GrahamCampbell\\ResultType\\Success' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Success.php',
+        'GrahamCampbell\\Throttle\\Data' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Data.php',
+        'GrahamCampbell\\Throttle\\Facades\\Throttle' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Facades/Throttle.php',
+        'GrahamCampbell\\Throttle\\Factory\\CacheFactory' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Factory/CacheFactory.php',
+        'GrahamCampbell\\Throttle\\Factory\\FactoryInterface' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Factory/FactoryInterface.php',
+        'GrahamCampbell\\Throttle\\Http\\Middleware\\ThrottleMiddleware' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Http/Middleware/ThrottleMiddleware.php',
+        'GrahamCampbell\\Throttle\\Throttle' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Throttle.php',
+        'GrahamCampbell\\Throttle\\ThrottleServiceProvider' => __DIR__ . '/..' . '/graham-campbell/throttle/src/ThrottleServiceProvider.php',
+        'GrahamCampbell\\Throttle\\Throttler\\CacheThrottler' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Throttler/CacheThrottler.php',
+        'GrahamCampbell\\Throttle\\Throttler\\ThrottlerInterface' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Throttler/ThrottlerInterface.php',
+        'GrahamCampbell\\Throttle\\Transformer\\ArrayTransformer' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Transformer/ArrayTransformer.php',
+        'GrahamCampbell\\Throttle\\Transformer\\RequestTransformer' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Transformer/RequestTransformer.php',
+        'GrahamCampbell\\Throttle\\Transformer\\TransformerFactory' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Transformer/TransformerFactory.php',
+        'GrahamCampbell\\Throttle\\Transformer\\TransformerFactoryInterface' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Transformer/TransformerFactoryInterface.php',
+        'GrahamCampbell\\Throttle\\Transformer\\TransformerInterface' => __DIR__ . '/..' . '/graham-campbell/throttle/src/Transformer/TransformerInterface.php',
         'GuzzleHttp\\Client' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Client.php',
         'GuzzleHttp\\ClientInterface' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/ClientInterface.php',
         'GuzzleHttp\\Cookie\\CookieJar' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Cookie/CookieJar.php',
